@@ -5,7 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.ServiceFabric.Services.Runtime;
 
-namespace Reifnir.Manager.Acquisition
+namespace Reifnir.Manager.Acquisition.Service
 {
     internal static class Program
     {
@@ -21,10 +21,10 @@ namespace Reifnir.Manager.Acquisition
                 // When Service Fabric creates an instance of this service type,
                 // an instance of the class is created in this host process.
 
-                ServiceRuntime.RegisterServiceAsync("Reifnir.Manager.AcquisitionType",
-                    context => new Acquisition(context)).GetAwaiter().GetResult();
+                ServiceRuntime.RegisterServiceAsync("Reifnir.Manager.Acquisition.ServiceType",
+                    context => new Service(context)).GetAwaiter().GetResult();
 
-                ServiceEventSource.Current.ServiceTypeRegistered(Process.GetCurrentProcess().Id, typeof(Acquisition).Name);
+                ServiceEventSource.Current.ServiceTypeRegistered(Process.GetCurrentProcess().Id, typeof(Service).Name);
 
                 // Prevents this host process from terminating so services keep running.
                 Thread.Sleep(Timeout.Infinite);

@@ -6,15 +6,16 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.ServiceFabric.Services.Communication.Runtime;
 using Microsoft.ServiceFabric.Services.Runtime;
+using Reifnir.Manager.Acquisition.Interface;
 
-namespace Reifnir.Manager.Acquisition
+namespace Reifnir.Manager.Acquisition.Service
 {
     /// <summary>
     /// An instance of this class is created for each service instance by the Service Fabric runtime.
     /// </summary>
-    internal sealed class Acquisition : StatelessService
+    internal sealed partial class AcquisitionService : StatelessService
     {
-        public Acquisition(StatelessServiceContext context)
+        public AcquisitionService(StatelessServiceContext context)
             : base(context)
         { }
 

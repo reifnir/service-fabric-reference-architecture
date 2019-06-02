@@ -7,9 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.ServiceFabric.Services.Runtime;
 
-namespace Reifnir.Manager.Acquisition
+namespace Reifnir.Manager.Acquisition.Service
 {
-    [EventSource(Name = "MyCompany-Reifnir.Microservice.Acquisition-Reifnir.Manager.Acquisition")]
+    [EventSource(Name = "MyCompany-Reifnir.Microservice.Acquisition-Reifnir.Manager.Acquisition.Service")]
 internal sealed class ServiceEventSource : EventSource
 {
     public static readonly ServiceEventSource Current = new ServiceEventSource();
