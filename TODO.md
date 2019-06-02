@@ -1,0 +1,11 @@
+# Todo list for service-fabric-reference-architecture
+- [ ] Create Service Fabric application, and AcquisitionManager Stateless Reliable Service
+    - [ ] Reduce template-generated boilerplate
+- [ ] Create FormattingEngine Stateless Reliable Service
+    - [ ] Reduce template-generated boilerplate
+- [ ] Create AssetAccess Stateless Reliable Service
+    - [ ] Reduce template-generated boilerplate
+- [ ] Implement ServiceFabricEx.V2
+- [ ] Integrate ServiceFabricEx.V2
+    - [ ] Reduce template-generated boilerplate
+- [ ] Fix architecture diagrams now that file storage API has been pulled into a Utility
