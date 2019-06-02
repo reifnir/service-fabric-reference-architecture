@@ -2,6 +2,10 @@
 - [x] Create Service Fabric application, and AcquisitionManager Stateless Reliable Service
 - [ ] Create FormattingEngine Stateless Reliable Service
 - [ ] Create AssetAccess Stateless Reliable Service
+- [ ] Add Pub/Sub capability
+- [ ] Publish AssetsFormatted event
+- [ ] Publish UnableToFormatAssets event
+- [ ] Subscribe to AssetsAcquired event
 - [ ] Reduce template-generated boilerplate
 - [ ] Implement ServiceFabricEx.V2
 - [ ] Integrate ServiceFabricEx.V2
