@@ -8,4 +8,5 @@
 - [ ] Implement ServiceFabricEx.V2
 - [ ] Integrate ServiceFabricEx.V2
     - [ ] Reduce template-generated boilerplate
-- [ ] Fix architecture diagrams now that file storage API has been pulled into a Utility
+- [ ] Update architecture diagrams now that file storage API has been pulled into a Utility
+- [ ] Add logical thread diagram
