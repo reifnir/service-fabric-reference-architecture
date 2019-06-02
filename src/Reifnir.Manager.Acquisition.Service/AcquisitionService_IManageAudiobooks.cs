@@ -11,7 +11,34 @@ namespace Reifnir.Manager.Acquisition.Service
     {
         Task<ReformatAssetResponse> IManageAudiobooks.RemormatAssetsAsync(ReformatAssetRequest request)
         {
-            throw new NotImplementedException();
+            if (request?.AssetId == null)
+                return SuccesfulFormatResponse(request.AssetId);
+            else
+                return FailedFormatResponse();
+        }
+
+        private Task<ReformatAssetResponse> FailedFormatResponse()
+        {
+            var response = new ReformatAssetResponse()
+            {
+                Message = "Didn't pass an AssetId, so how do you expect this to work?"
+            };
+
+
+            return Task.FromResult(response);
+        }
+
+        private Task<ReformatAssetResponse> SuccesfulFormatResponse(string assetId)
+        {
+            var response = new ReformatAssetResponse()
+                  {
+                      Success = true,
+                      AssetId = assetId,
+                      Message = "Didn't pass an AssetId, so how do you expect this to succeed?"
+                  };
+
+            //TODO: Publish AssetsFormatted event
+            return Task.FromResult(response);
         }
     }
 }

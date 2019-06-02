@@ -21,12 +21,12 @@ namespace Reifnir.Manager.Acquisition.Interface
         /// This event is fired following the successful completion of the "Acquire Assets" use case.
         /// </summary>
         /// <param name="assetId"></param>
-        void AssetsAcquired(Guid assetId);
+        void AssetsAcquired(string assetId);
 
         /// <summary>
         /// This event is fired following the successful completion of formatting a set of assets.
         /// </summary>
         /// <param name="assetId"></param>
-        void AssetsFormatted(Guid assetId);
+        void AssetsFormatted(string assetId);
     }
 }

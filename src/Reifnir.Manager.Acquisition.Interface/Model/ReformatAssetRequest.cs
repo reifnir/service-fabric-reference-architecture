@@ -6,6 +6,6 @@ namespace Reifnir.Manager.Acquisition.Interface.Model
 {
     public class ReformatAssetRequest
     {
-        public Guid AssetId { get; set; }
+        public string AssetId { get; set; }
     }
 }
