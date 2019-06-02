@@ -25,7 +25,10 @@ namespace Reifnir.Manager.Acquisition.Service
         /// <returns>A collection of listeners.</returns>
         protected override IEnumerable<ServiceInstanceListener> CreateServiceInstanceListeners()
         {
-            return new ServiceInstanceListener[0];
+            //return new ServiceInstanceListener[0]; <-- default implementation
+
+            // this implementation comes from an extension method in the Microsoft.ServiceFabric.Services.Remoting.Runtime namespace
+            return this.CreateServiceRemotingInstanceListeners();
         }
 
         /// <summary>
