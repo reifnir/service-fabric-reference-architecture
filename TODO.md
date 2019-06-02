@@ -1,5 +1,5 @@
 # Todo list for service-fabric-reference-architecture
-- [ ] Create Service Fabric application, and AcquisitionManager Stateless Reliable Service
+- [x] Create Service Fabric application, and AcquisitionManager Stateless Reliable Service
     - [ ] Reduce template-generated boilerplate
 - [ ] Create FormattingEngine Stateless Reliable Service
     - [ ] Reduce template-generated boilerplate
