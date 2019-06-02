@@ -22,9 +22,9 @@ namespace Reifnir.Manager.Acquisition.Service
                 // an instance of the class is created in this host process.
 
                 ServiceRuntime.RegisterServiceAsync("Reifnir.Manager.Acquisition.ServiceType",
-                    context => new Service(context)).GetAwaiter().GetResult();
+                    context => new AcquisitionService(context)).GetAwaiter().GetResult();
 
-                ServiceEventSource.Current.ServiceTypeRegistered(Process.GetCurrentProcess().Id, typeof(Service).Name);
+                ServiceEventSource.Current.ServiceTypeRegistered(Process.GetCurrentProcess().Id, typeof(AcquisitionService).Name);
 
                 // Prevents this host process from terminating so services keep running.
                 Thread.Sleep(Timeout.Infinite);
