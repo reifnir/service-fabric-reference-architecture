@@ -1,6 +1,7 @@
 ﻿using Microsoft.ServiceFabric.Services.Remoting;
 using Reifnir.Manager.Acquisition.Interface.Model;
 using System;
+using System.Threading.Tasks;
 
 namespace Reifnir.Manager.Acquisition.Interface
 {
@@ -15,6 +16,6 @@ namespace Reifnir.Manager.Acquisition.Interface
         /// 2: Formatting files previously failed, but the system has been enhanced to handle the new conditions.
         /// </summary>
         /// <param name="request"></param>
-        ReformatAssetResponse RemormatAssetsAsync(ReformatAssetRequest request);
+        Task<ReformatAssetResponse> RemormatAssetsAsync(ReformatAssetRequest request);
     }
 }
