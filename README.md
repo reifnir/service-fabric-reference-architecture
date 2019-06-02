@@ -21,7 +21,7 @@ In this system, there are several core use cases, however, use cases realted to 
 The Acquisition Manager is responsible for orchestrating calls to components, error compensation, and publishing events related to the use case. It *owns* the use case. As a Manager, it is the single point of entry from client applications. _Note: Client applications are typically web applications, API servers, and scheduled jobs._
 
 #### Formatting
-The Formatting Engine 
+The Formatting Engine is responsible for converting audiobook files from their original format into one that is more-easily consumed by the rest of the system.
 * Audiobooks may come in with different packaging, encoding, and file formats (mp3, m4a, m4v, m4b, aac, etc.).
 * Audiobooks may come in with different audio qualities, and may need to be reviewed.
     * Because sometimes files have ticks or encoding errors
@@ -29,9 +29,13 @@ The Formatting Engine
     * Because sometimes unexpected file naming schemes are not arranged in the expected order
     * Because sometimes the book has been read by Scott Brick
 
-
 #### Asset Resources
-Metadata and file access are accessed.
+The Asset Resource Access component is responsible for persistence of state about audio assets. It is a single pane of glass for the rest of the system when it comes to accessing asset metadata from the Asset Resource datastore.
+
+Note: As this is a distributed system, giant blobs of binary data are not put directly into messages. The only things passed around are identifiers.
+
+#### File Storage Utility
+As more than one component needs to be able to directly access audio file binaries and it is made up of little more than CRUD operations (as opposed to business operations), access to the underlying file storage is handled via a utility and not by a Resource Access component.
 
 [audiobook-design]: ./design/README.md
 [idesign-method-download]: http://www.idesign.net/Downloads/GetDownload/1902
