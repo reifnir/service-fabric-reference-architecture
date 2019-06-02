@@ -16,6 +16,6 @@ namespace Reifnir.Manager.Acquisition.Interface
         /// 2: Formatting files previously failed, but the system has been enhanced to handle the new conditions.
         /// </summary>
         /// <param name="request"></param>
-        Task<ReformatAssetResponse> RemormatAssetsAsync(ReformatAssetRequest request);
+        Task<ReformatAssetResponse> ReformatAssetsAsync(ReformatAssetRequest request);
     }
 }

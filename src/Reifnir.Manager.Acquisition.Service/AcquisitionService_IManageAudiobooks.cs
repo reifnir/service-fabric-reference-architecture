@@ -9,9 +9,9 @@ namespace Reifnir.Manager.Acquisition.Service
 {
     internal sealed partial class AcquisitionService : IManageAudiobooks
     {
-        Task<ReformatAssetResponse> IManageAudiobooks.RemormatAssetsAsync(ReformatAssetRequest request)
+        Task<ReformatAssetResponse> IManageAudiobooks.ReformatAssetsAsync(ReformatAssetRequest request)
         {
-            if (request?.AssetId == null)
+            if (request?.AssetId != null)
                 return SuccesfulFormatResponse(request.AssetId);
             else
                 return FailedFormatResponse();
@@ -34,7 +34,7 @@ namespace Reifnir.Manager.Acquisition.Service
                   {
                       Success = true,
                       AssetId = assetId,
-                      Message = "Didn't pass an AssetId, so how do you expect this to succeed?"
+                      Message = "Huzzah!"
                   };
 
             //TODO: Publish AssetsFormatted event

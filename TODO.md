@@ -12,3 +12,4 @@
     - [ ] Reduce template-generated boilerplate
 - [ ] Update architecture diagrams now that file storage API has been pulled into a Utility
 - [ ] Add logical thread diagram
+- [ ] Provide config for connection string override for application uri root for heterogenous clusters.
