@@ -30,7 +30,7 @@ namespace Reifnir.Client.Test
             //Using basic Service Factory proxy for now...
             var proxy = CreateManagerProxy<IManageAudiobooks>();
 
-            async Task callService(ReformatAssetRequest x)
+            async Task callService(FormatAssetRequest x)
             {
                 var result = await proxy.ReformatAssetsAsync(x);
                 Console.WriteLine($"result == null: {result == null}");
@@ -45,10 +45,10 @@ namespace Reifnir.Client.Test
             await callService(null);
 
             Console.WriteLine("ReformatAssetsAsync: passing object but not setting AssetId");
-            await callService(new ReformatAssetRequest());
+            await callService(new FormatAssetRequest());
 
             Console.WriteLine("ReformatAssetsAsync: passing object with AssetId set");
-            await callService(new ReformatAssetRequest() { AssetId = $"some-asset-id-format-{Guid.NewGuid()}" } );
+            await callService(new FormatAssetRequest() { AssetId = $"some-asset-id-format-{Guid.NewGuid()}" } );
 
         }
 

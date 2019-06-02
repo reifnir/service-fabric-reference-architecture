@@ -8,7 +8,7 @@ namespace Reifnir.Manager.Acquisition.Interface
     public interface IManageAudiobooks : IService
     {
         /// <summary>
-        /// This is the RPC-style method for attempting to reformat assets. This is called by a Client application
+        /// This is the RPC-style method for attempting to format (or reformat) assets. This is called by a Client application
         /// (Android App or Web Portal) and awaits formatting to be completed.
         /// 
         /// This variation of the "Format Assets" use case is typically done for one of two reasons:
@@ -16,6 +16,7 @@ namespace Reifnir.Manager.Acquisition.Interface
         /// 2: Formatting files previously failed, but the system has been enhanced to handle the new conditions.
         /// </summary>
         /// <param name="request"></param>
-        Task<ReformatAssetResponse> ReformatAssetsAsync(ReformatAssetRequest request);
+        /// <returns></returns>
+        Task<FormatAssetResponse> FormatAssetsAsync(FormatAssetRequest request);
     }
 }

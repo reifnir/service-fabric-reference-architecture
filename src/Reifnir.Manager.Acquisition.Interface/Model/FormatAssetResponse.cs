@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Reifnir.Manager.Acquisition.Interface.Model
 {
-    public class ReformatAssetResponse
+    public class FormatAssetResponse
     {
         public string AssetId { get; set; }        
         public bool Success { get; set; }
