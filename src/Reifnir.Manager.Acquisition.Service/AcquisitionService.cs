@@ -6,8 +6,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.ServiceFabric.Services.Communication.Runtime;
 using Microsoft.ServiceFabric.Services.Runtime;
+using Microsoft.ServiceFabric.Services.Remoting.Runtime;
 using Reifnir.Manager.Acquisition.Interface;
-
 namespace Reifnir.Manager.Acquisition.Service
 {
     /// <summary>
@@ -45,14 +45,16 @@ namespace Reifnir.Manager.Acquisition.Service
         {
             return base.OnOpenAsync(cancellationToken);
         }
+
         /// <summary>
         /// This is the main entry point for your service instance.
+        /// 
+        /// Warning: Respect all cancellation tokens or you'll have headaches at runtime!
         /// </summary>
         /// <param name="cancellationToken">Canceled when Service Fabric needs to shut down this service instance.</param>
         protected override async Task RunAsync(CancellationToken cancellationToken)
         {
-            // TODO: Replace the following sample code with your own logic 
-            //       or remove this RunAsync override if it's not needed in your service.
+            // If you have logic that must run throughout the lift of your service, put that here!
 
             long iterations = 0;
 
