@@ -1,5 +1,7 @@
 ﻿using Microsoft.ServiceFabric.Services.Remoting;
+using Reifnir.Manager.Acquisition.Interface.Model;
 using System;
+using System.Threading.Tasks;
 
 namespace Reifnir.Manager.Acquisition.Interface
 {
@@ -20,13 +22,20 @@ namespace Reifnir.Manager.Acquisition.Interface
         /// <summary>
         /// This event is fired following the successful completion of the "Acquire Assets" use case.
         /// </summary>
-        /// <param name="assetId"></param>
-        void AssetsAcquired(string assetId);
+        /// <param name="assetId">AssetId of the that were just formatted.</param>
+        Task AssetsAcquiredAsync(string assetId);
 
         /// <summary>
         /// This event is fired following the successful completion of formatting a set of assets.
         /// </summary>
-        /// <param name="assetId"></param>
-        void AssetsFormatted(string assetId);
+        /// <param name="assetId">AssetId of the that were just formatted.</param>
+        Task AssetsFormattedAsync(string assetId);
+
+        /// <summary>
+        /// This event is published when there is a failure that occurs during the FormatAssets use case.
+        /// </summary>
+        /// <param name="e">State related to failed attempt to format assets.</param>
+        /// <returns></returns>
+        Task FormattingAssetsFailedAsync(FormattingAssetsFailedEvent e);
     }
 }

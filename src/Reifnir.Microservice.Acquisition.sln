@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reifnir.Manager.Acquisition
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reifnir.Manager.Acquisition.Interface", "Reifnir.Manager.Acquisition.Interface\Reifnir.Manager.Acquisition.Interface.csproj", "{1300C609-FA6D-4448-9271-2E472EE58745}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reifnir.Client.Test", "Reifnir.Client.Test\Reifnir.Client.Test.csproj", "{0CE1E826-3681-4AE5-8995-B597033D931F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reifnir.Client.Test", "Reifnir.Client.Test\Reifnir.Client.Test.csproj", "{0CE1E826-3681-4AE5-8995-B597033D931F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reifnir.Engine.Formatting.Service", "Reifnir.Engine.Formatting.Service\Reifnir.Engine.Formatting.Service.csproj", "{0A84A407-FD5D-4066-96A4-F45D7C6ABD97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reifnir.Engine.Formatting.Interface", "Reifnir.Engine.Formatting.Interface\Reifnir.Engine.Formatting.Interface.csproj", "{31EF8EAB-AED3-43CD-858A-02E56BB261A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,22 @@ Global
 		{0CE1E826-3681-4AE5-8995-B597033D931F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0CE1E826-3681-4AE5-8995-B597033D931F}.Release|x64.ActiveCfg = Release|Any CPU
 		{0CE1E826-3681-4AE5-8995-B597033D931F}.Release|x64.Build.0 = Release|Any CPU
+		{0A84A407-FD5D-4066-96A4-F45D7C6ABD97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A84A407-FD5D-4066-96A4-F45D7C6ABD97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A84A407-FD5D-4066-96A4-F45D7C6ABD97}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0A84A407-FD5D-4066-96A4-F45D7C6ABD97}.Debug|x64.Build.0 = Debug|Any CPU
+		{0A84A407-FD5D-4066-96A4-F45D7C6ABD97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A84A407-FD5D-4066-96A4-F45D7C6ABD97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A84A407-FD5D-4066-96A4-F45D7C6ABD97}.Release|x64.ActiveCfg = Release|Any CPU
+		{0A84A407-FD5D-4066-96A4-F45D7C6ABD97}.Release|x64.Build.0 = Release|Any CPU
+		{31EF8EAB-AED3-43CD-858A-02E56BB261A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31EF8EAB-AED3-43CD-858A-02E56BB261A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31EF8EAB-AED3-43CD-858A-02E56BB261A4}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{31EF8EAB-AED3-43CD-858A-02E56BB261A4}.Debug|x64.Build.0 = Debug|Any CPU
+		{31EF8EAB-AED3-43CD-858A-02E56BB261A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31EF8EAB-AED3-43CD-858A-02E56BB261A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31EF8EAB-AED3-43CD-858A-02E56BB261A4}.Release|x64.ActiveCfg = Release|Any CPU
+		{31EF8EAB-AED3-43CD-858A-02E56BB261A4}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

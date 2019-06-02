@@ -10,7 +10,9 @@ namespace Reifnir.Client.Test
 {
     class Program
     {
+#pragma warning disable IDE0060 // Remove unused parameter
         static void Main(string[] args)
+#pragma warning restore IDE0060 // Remove unused parameter
         {
             try
             {
@@ -32,7 +34,7 @@ namespace Reifnir.Client.Test
 
             async Task callService(FormatAssetRequest x)
             {
-                var result = await proxy.ReformatAssetsAsync(x);
+                var result = await proxy.FormatAssetsAsync(x);
                 Console.WriteLine($"result == null: {result == null}");
                 Console.WriteLine($"result?.Success: {result?.Success}");
                 Console.WriteLine($"result?.AssetId: {result?.AssetId}");

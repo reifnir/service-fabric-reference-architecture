@@ -9,7 +9,7 @@ namespace Reifnir.Manager.Acquisition.Service
 {
     internal sealed partial class AcquisitionService : IManageAudiobooks
     {
-        Task<FormatAssetResponse> IManageAudiobooks.ReformatAssetsAsync(FormatAssetRequest request)
+        Task<FormatAssetResponse> IManageAudiobooks.FormatAssetsAsync(FormatAssetRequest request)
         {
             if (request?.AssetId != null)
                 return SuccesfulFormatResponse(request.AssetId);
@@ -24,7 +24,7 @@ namespace Reifnir.Manager.Acquisition.Service
                 Message = "Didn't pass an AssetId, so how do you expect this to work?"
             };
 
-
+            //TODO: Publish AssetsFormatted event
             return Task.FromResult(response);
         }
 

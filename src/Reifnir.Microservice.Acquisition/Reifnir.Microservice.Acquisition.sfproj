@@ -32,6 +32,7 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Reifnir.Engine.Formatting.Service\Reifnir.Engine.Formatting.Service.csproj" />
     <ProjectReference Include="..\Reifnir.Manager.Acquisition.Service\Reifnir.Manager.Acquisition.Service.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
