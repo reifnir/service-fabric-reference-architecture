@@ -20,9 +20,9 @@ namespace Reifnir.Manager.Acquisition.Service
         { }
 
         /// <summary>
-        /// Optional override to create listeners (e.g., TCP, HTTP) for this service replica to handle client or user requests.
+        /// Initialize remoting listener
         /// </summary>
-        /// <returns>A collection of listeners.</returns>
+        /// <returns></returns>
         protected override IEnumerable<ServiceInstanceListener> CreateServiceInstanceListeners()
         {
             //return new ServiceInstanceListener[0]; <-- default implementation
