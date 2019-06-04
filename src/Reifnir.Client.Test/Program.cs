@@ -49,8 +49,11 @@ namespace Reifnir.Client.Test
             Console.WriteLine("ReformatAssetsAsync: passing object but not setting AssetId");
             await callService(new FormatAssetRequest());
 
-            Console.WriteLine("ReformatAssetsAsync: passing object with AssetId set");
-            await callService(new FormatAssetRequest() { AssetId = $"some-asset-id-format-{Guid.NewGuid()}" } );
+            Console.WriteLine("ReformatAssetsAsync: passing object with an unsuccessful AssetId");
+            await callService(new FormatAssetRequest() { AssetId = $"some-unsuccessful-assetid-{Guid.NewGuid()}" });
+
+            Console.WriteLine("ReformatAssetsAsync: passing object with a successful AssetId");
+            await callService(new FormatAssetRequest() { AssetId = $"this-should-succeed-{Guid.NewGuid()}" });
 
         }
 

@@ -1,6 +1,6 @@
 # Todo list for service-fabric-reference-architecture
 - [x] Create Service Fabric application, and AcquisitionManager Stateless Reliable Service
-- [ ] Create FormattingEngine Stateless Reliable Service
+- [x] Create FormattingEngine Stateless Reliable Service
 - [ ] Create AssetAccess Stateless Reliable Service
 - [ ] Add Pub/Sub capability
 - [ ] Publish AssetsFormatted event
@@ -13,3 +13,5 @@
 - [ ] Update architecture diagrams now that file storage API has been pulled into a Utility
 - [ ] Add logical thread diagram
 - [ ] Provide config for connection string override for application uri root for heterogenous clusters.
+- [ ] Add logic to base StatelessRemotingService constructor that ensure that the service listening address follows the convention
+- [ ] Publish event (either AssetsFormattedAsync or FormattingAssetsFailedAsync) when formatting completes in AcquisitionService_IManageAudiobooks.cs

@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Reifnir.Engine.Formatting.Interface\Reifnir.Engine.Formatting.Interface.csproj" />
     <ProjectReference Include="..\Reifnir.Manager.Acquisition.Interface\Reifnir.Manager.Acquisition.Interface.csproj" />
   </ItemGroup>
 

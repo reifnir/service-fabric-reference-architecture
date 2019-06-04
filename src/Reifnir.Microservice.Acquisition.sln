@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28922.388
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reifnir.Engine.Formatting.Service", "Reifnir.Engine.Formatting.Service\Reifnir.Engine.Formatting.Service.csproj", "{0A84A407-FD5D-4066-96A4-F45D7C6ABD97}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reifnir.Engine.Formatting.Interface", "Reifnir.Engine.Formatting.Interface\Reifnir.Engine.Formatting.Interface.csproj", "{31EF8EAB-AED3-43CD-858A-02E56BB261A4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Engines", "Engines", "{CD20E625-54A8-489E-8E34-BD988119141A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -8,6 +8,7 @@ using Microsoft.ServiceFabric.Services.Communication.Runtime;
 using Microsoft.ServiceFabric.Services.Runtime;
 using Microsoft.ServiceFabric.Services.Remoting.Runtime;
 using Reifnir.Manager.Acquisition.Interface;
+
 namespace Reifnir.Manager.Acquisition.Service
 {
     /// <summary>
@@ -15,9 +16,14 @@ namespace Reifnir.Manager.Acquisition.Service
     /// </summary>
     internal sealed partial class AcquisitionService : StatelessService
     {
+        private readonly Uri FabricApplicationBaseUri;
         public AcquisitionService(StatelessServiceContext context)
             : base(context)
-        { }
+        {
+            //Many of the Uri helper methods don't help as this the scheme only has a single forward slash
+            var serviceAddressComponents = context.ServiceName.AbsoluteUri.Split('/');
+            FabricApplicationBaseUri = new Uri($"fabric:/{serviceAddressComponents[1]}/", UriKind.Absolute);
+        }
 
         /// <summary>
         /// Initialize remoting listener
