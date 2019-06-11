@@ -5,6 +5,10 @@ Microsoft has two sets of tooling for Service Fabric and they are _very_ differe
 ## Why did I write this?
 The purpose of this guide is to get you up to speed on the specifics on the  two different tooling methods and how they practically differ. There didn't seem to be any documentation out there on the web comparing the two, so hopefully this saves you a couple of hours just getting to this point, yourselves.
 
+## TL;DR
+* 
+
+
 ## What Parts Make Up Service Fabric Application Definition
 **ApplicationManifest.xml**: Declaratively describes the application type and version. One or more service manifests of the constituent services are referenced to compose an application type. Configuration settings of the constituent services can be overridden using parameterized application settings. Default services, service templates, principals, policies, diagnostics set-up, and certificates can also declared at the application level.
 * Defines values for ApplicationParameters that can be overrideen by a given Application Parameter XML file.
